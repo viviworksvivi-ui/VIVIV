@@ -57,23 +57,6 @@ export default function HomePage() {
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-blob z-10"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-blob z-10" style={{ animationDelay: "2s" }}></div>
 
-        {/* Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-20">
-          <div className="max-w-4xl">
-            <div className="space-y-8 animate-slide-in-up">
-              <div className="space-y-6">
-                <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-balance text-white drop-shadow-2xl">
-                  {t('home.hero.title')}
-                </h1>
-
-                <p className="text-xl lg:text-2xl leading-relaxed text-pretty text-white/90 drop-shadow-lg max-w-3xl">
-                  {t('home.hero.subtitle')}
-                </p>
-              </div>
-
-            </div>
-          </div>
-        </div>
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce-down">
