@@ -10,6 +10,8 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [marketingOpen, setMarketingOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const [mobileMarketingOpen, setMobileMarketingOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const { t } = useI18n()
 
@@ -81,7 +83,7 @@ export function Navigation() {
         : "bg-background/80 backdrop-blur-sm border-b border-transparent"
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`flex justify-start items-center transition-all duration-300 ${
+        <div className={`flex justify-between items-center transition-all duration-300 ${
           scrolled ? "h-20 lg:h-24" : "h-24 lg:h-28"
         }`}>
           <Link href="/" className="flex items-center space-x-3 group">
@@ -160,7 +162,7 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button - RIGHT */}
           <div className="lg:hidden">
             <Button
               variant="ghost"
@@ -181,38 +183,55 @@ export function Navigation() {
         {isOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-4 pb-4 space-y-2 sm:px-3 bg-background/98 backdrop-blur-lg border-t border-border/50 rounded-b-lg shadow-lg">
-              {navItems.map((item, index) => (
-                <div key={item.href}>
-                  {item.hasDropdown ? (
-                    <div className="space-y-1">
-                      <div className="px-4 py-3 text-foreground/80 font-medium text-sm">
+                {navItems.map((item, index) => (
+                  <div key={item.href}>
+                    {item.hasDropdown ? (
+                      <div className="space-y-1">
+                        <button
+                          className="w-full flex items-center justify-between px-4 py-3 text-foreground/80 font-medium text-sm hover:bg-primary/5 rounded-lg transition-colors"
+                          onClick={() => {
+                            if (item.label === t('nav.services')) {
+                              setMobileServicesOpen(!mobileServicesOpen)
+                            } else {
+                              setMobileMarketingOpen(!mobileMarketingOpen)
+                            }
+                          }}
+                        >
+                          <span>{item.label}</span>
+                          <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${
+                            (item.label === t('nav.services') ? mobileServicesOpen : mobileMarketingOpen) ? "rotate-180" : ""
+                          }`} />
+                        </button>
+                        {(item.label === t('nav.services') ? mobileServicesOpen : mobileMarketingOpen) && (
+                          <div className="pl-4 space-y-1 animate-fade-in-down">
+                            {item.dropdownItems?.map((dropdownItem) => (
+                              <Link
+                                key={dropdownItem.href}
+                                href={dropdownItem.href}
+                                className="block px-4 py-2 text-foreground/60 hover:text-primary hover:bg-primary/5 transition-colors duration-200 rounded-lg text-sm"
+                                onClick={() => {
+                                  setIsOpen(false)
+                                  setMobileServicesOpen(false)
+                                  setMobileMarketingOpen(false)
+                                }}
+                              >
+                                {dropdownItem.label}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="block px-4 py-3 text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors duration-200 rounded-lg text-sm font-medium"
+                        onClick={() => setIsOpen(false)}
+                      >
                         {item.label}
-                      </div>
-                      <div className="pl-4 space-y-1">
-                        {item.dropdownItems?.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.href}
-                            href={dropdownItem.href}
-                            className="block px-4 py-2 text-foreground/60 hover:text-primary hover:bg-primary/5 transition-colors duration-200 rounded-lg text-sm"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            {dropdownItem.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className="block px-4 py-3 text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors duration-200 rounded-lg text-sm font-medium"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  )}
-                </div>
-              ))}
-              
+                      </Link>
+                    )}
+                  </div>
+                ))}
             </div>
           </div>
         )}
