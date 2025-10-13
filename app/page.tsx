@@ -71,36 +71,6 @@ export default function HomePage() {
                 </p>
               </div>
 
-              {/* Stats or features */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 animate-slide-in-up [animation-delay:0.3s]">
-                <div className="flex items-center gap-4 p-5 glass border border-white/20 rounded-xl hover-lift-glow group cursor-pointer backdrop-blur-md">
-                  <div className="p-3 bg-gradient-to-br from-primary to-primary/50 rounded-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
-                    <Zap className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-white group-hover:text-primary transition-colors">Innovation</h3>
-                    <p className="text-sm text-white/80">Solutions créatives</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 p-5 glass border border-white/20 rounded-xl hover-lift-glow group cursor-pointer backdrop-blur-md">
-                  <div className="p-3 bg-gradient-to-br from-secondary to-secondary/50 rounded-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
-                    <Target className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-white group-hover:text-secondary transition-colors">Performance</h3>
-                    <p className="text-sm text-white/80">Résultats mesurables</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 p-5 glass border border-white/20 rounded-xl hover-lift-glow group cursor-pointer backdrop-blur-md">
-                  <div className="p-3 bg-gradient-to-br from-primary to-primary/50 rounded-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
-                    <TrendingUp className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-white group-hover:text-primary transition-colors">Collaboration</h3>
-                    <p className="text-sm text-white/80">Partenariat durable</p>
-                  </div>
-            </div>
-              </div>
             </div>
           </div>
         </div>

@@ -159,26 +159,6 @@ export default function AboutPage() {
               {t('realisations.hero.subtitle')}
             </motion.p>
 
-            {/* Stats */}
-            <motion.div 
-              className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
-              <div className="glass border border-white/20 rounded-xl p-6 backdrop-blur-md hover-lift-glow">
-                <div className="text-4xl font-bold text-white mb-2">12+</div>
-                <div className="text-white/80 text-sm">Experts passionnés</div>
-              </div>
-              <div className="glass border border-white/20 rounded-xl p-6 backdrop-blur-md hover-lift-glow">
-                <div className="text-4xl font-bold text-white mb-2">50+</div>
-                <div className="text-white/80 text-sm">Projets réalisés</div>
-              </div>
-              <div className="glass border border-white/20 rounded-xl p-6 backdrop-blur-md hover-lift-glow">
-                <div className="text-4xl font-bold text-white mb-2">100%</div>
-                <div className="text-white/80 text-sm">Satisfaction client</div>
-            </div>
-            </motion.div>
           </motion.div>
         </div>
 
