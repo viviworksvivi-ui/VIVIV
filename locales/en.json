@@ -1,0 +1,322 @@
+{
+  "home": {
+    "hero": {
+      "title": "Viviworks: A digital agency that boosts your growth",
+      "subtitle": "Optimize your online presence with our digital marketing services! Our digital communication agency offers web development, SEO and community management."
+    },
+    "cards": {
+      "cases": {
+        "title": "Case studies",
+        "p1": "Since our creation, we have supported many companies of various sizes and sectors in their digital transformation.",
+        "p2": "Our case studies show how we help clients improve their e-visibility, develop their growth and strengthen their digital presence.",
+        "p3": "These successes illustrate our mission: turning digital challenges into opportunities for success.",
+        "cta": "See our case studies"
+      },
+      "portfolio": {
+        "title": "Project portfolio",
+        "p1": "Our portfolio reflects the diversity and quality of our digital achievements. Each project is the result of close collaboration with our clients.",
+        "p2": "These projects highlight our know-how, creativity and ability to meet the unique needs of each company.",
+        "p3": "Discover our successes and how we helped our customers achieve their online goals.",
+        "cta": "Discover our portfolio"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "The portfolio of our digital agency",
+      "subtitle": "Discover our web projects, case studies and marketing achievements that showcase our expertise and tangible impact."
+    }
+  },
+  "realisations": {
+    "hero": {
+      "title": "The portfolio of our digital agency",
+      "subtitle": "Discover our web projects, case studies and marketing achievements that showcase our expertise and tangible impact."
+    },
+    "caseStudies": {
+      "badge": "Case studies",
+      "headline": "Each case study highlights how we helped clients reach their goals with tailored digital strategies.",
+      "desc": "From improving online visibility to increasing sales, our case studies demonstrate the added value of our digital marketing expertise.",
+      "cta": "Discover how our concrete solutions translate into measurable results for our clients."
+    },
+    "portfolio": {
+      "badge": "Project portfolio",
+      "headline": "Our web projects and marketing achievements reflect our creativity and our ability to meet each company's unique needs.",
+      "desc1": "From building high‑performance websites to impactful digital campaigns, our portfolio illustrates the diversity and quality of our work.",
+      "desc2": "Every project is designed to maximize our clients' visibility and growth."
+    },
+    "cta": {
+      "title": "Want to join our next successes?",
+      "subtitle": "Contact us to discuss your digital project.",
+      "button1": "Contact us",
+      "button2": "Discover our services"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact us",
+      "subtitle": "Ready to transform your digital presence? Let's talk about your project."
+    },
+    "form": {
+      "firstName": "First name *",
+      "firstNamePlaceholder": "Your first name",
+      "lastName": "Last name *",
+      "lastNamePlaceholder": "Your last name",
+      "email": "Email *",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+33665758583",
+      "company": "Company",
+      "companyPlaceholder": "Your company name",
+      "service": "Desired service *",
+      "servicePlaceholder": "Select a service",
+      "message": "Message *",
+      "messagePlaceholder": "Describe your project, goals and expectations...",
+      "submit": "Send my request",
+      "privacy": "By submitting this form, you accept our privacy policy."
+    },
+    "info": {
+      "title": "Our Contact Details",
+      "call": "Call now",
+      "email": "Direct email"
+    },
+    "map": {
+      "title": "Come Meet Us",
+      "subtitle": "Our office is located in London. Schedule an appointment to discuss your project over coffee.",
+      "cardTitle": "Interactive Map",
+      "address": "24-26 Arcadia Avenue, London, N3 2JU",
+      "button": "View on Google Maps"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "What is the average timeline for a project?",
+        "answer": "Timelines vary by complexity: 2-4 weeks for a showcase site, 2-3 months for e-commerce, 3-6 months for a complex web application."
+      },
+      "q2": {
+        "question": "Do you offer follow-up after delivery?",
+        "answer": "Yes, we offer 3 months of free support after delivery, then maintenance contracts adapted to your needs."
+      },
+      "q3": {
+        "question": "Do you work with companies of all sizes?",
+        "answer": "Absolutely! We support both startups and large companies, adapting our solutions to your budget and objectives."
+      },
+      "q4": {
+        "question": "How does a typical project unfold?",
+        "answer": "Needs analysis → Detailed quote → Design/Conception → Development → Testing → Training → Delivery → Follow-up."
+      }
+    }
+  },
+  "marketing": {
+    "metaAds": {
+      "hero": {
+        "title": "Boost your brand awareness and generate conversions with Meta Ads",
+        "subtitle": "Targeted ads on Facebook, Instagram and Messenger."
+      },
+      "intro": {
+        "title": "Our Meta Ads Services",
+        "p1": "Meta Ads allow you to reach a very large and hyper-targeted audience on the world's most popular platforms: Facebook, Instagram and Messenger.",
+        "p2": "Whether for awareness or conversion objectives, Meta Ads helps you reach the right audience with visual and engaging ads."
+      },
+      "why": {
+        "title": "Why choose Meta Ads with Viviworks?"
+      },
+      "cta": {
+        "title": "Your next step",
+        "subtitle": "Launch into the world of social advertising with Viviworks. We help you build custom Meta Ads campaigns to increase your online presence and boost your conversions.",
+        "button1": "Contact us",
+        "button2": "See our achievements"
+      }
+    },
+    "campaigns": {
+      "hero": {
+        "title": "Advertising Campaigns",
+        "subtitle": "Boost your visibility and achieve your business goals with targeted and high-performing advertising campaigns.",
+        "p2": "At Viviworks, we create custom campaigns, whether on Google Ads or Meta Ads, to maximize your return on investment.",
+        "button1": "Start your campaign",
+        "button2": "See our achievements"
+      },
+      "googleAds": {
+        "title": "Google Ads",
+        "subtitle": "Reach your potential customers exactly where they're looking",
+        "p1": "Google Ads campaigns are a powerful lever to help you capture qualified prospects at the precise moment they express a need.",
+        "p2": "We optimize your ads to make you appear in first position on search engines, while maximizing the efficiency of each advertising spend."
+      },
+      "metaAds": {
+        "title": "Meta Ads (Facebook, Instagram, Messenger...)",
+        "subtitle": "Capture your customers' attention where they spend the most time",
+        "p1": "With Meta Ads, we help you design ads that generate engagement, traffic and conversions on the world's most popular social platforms: Facebook, Instagram and Messenger.",
+        "p2": "Our approach is based on finely targeted audience segments and impactful visuals."
+      },
+      "why": {
+        "title": "Why choose Viviworks for your advertising campaigns?"
+      },
+      "cta": {
+        "title": "Ready to start your advertising campaign?",
+        "subtitle": "Whether you're interested in Google Ads or Meta Ads, Viviworks is here to maximize the impact of your online advertising and generate concrete results.",
+        "button1": "Contact us",
+        "button2": "See our achievements"
+      }
+    },
+    "googleAds": {
+      "hero": {
+        "title": "Boost your visibility with Google Ads",
+        "subtitle": "Reach your customers at the right time, in the right place with optimized Google Ads campaigns.",
+        "button1": "Start your campaign",
+        "button2": "See our achievements"
+      },
+      "intro": {
+        "title": "Why Google Ads?",
+        "p1": "Google Ads allows you to appear in first position of Google search results for strategic keywords.",
+        "p2": "It's the most effective way to capture qualified prospects at the precise moment they express a need."
+      },
+      "why": {
+        "title": "Why choose Viviworks for Google Ads?"
+      },
+      "cta": {
+        "title": "Ready to boost your visibility?",
+        "subtitle": "Contact us to discuss your Google Ads strategy and discover how we can help you achieve your business goals.",
+        "button1": "Contact us",
+        "button2": "See our achievements"
+      }
+    },
+    "hero": {
+      "title": "Digital Marketing",
+      "subtitle": "Make your online presence shine with Viviworks. Our team accompanies you in implementing effective and personalized digital strategies to boost your visibility, attract your customers and maximize your results."
+    },
+    "services": {
+      "badge": "Our digital marketing services",
+      "title": "Custom solutions for your growth"
+    },
+    "cta": {
+      "title": "Want to accelerate your growth?",
+      "subtitle": "At Viviworks, we don't just click \"Boost post\". We design data-driven strategies that speak to your customers and meet your business objectives.",
+      "button1": "Get in touch",
+      "button2": "Discover our achievements"
+    }
+  },
+  "blog": {
+    "hero": {
+      "title": "Digital Marketing Blog – Inspiration and advice",
+      "subtitle": "Find our articles, digital news and practical guides to stay at the forefront of marketing and web."
+    },
+    "articles": {
+      "badge": "Our articles",
+      "title": "Our in-depth articles offer expert analysis of trends, tools and strategies that transform digital.",
+      "subtitle": "Designed to inspire and guide you, they help you make the right decisions for your business."
+    },
+    "guides": {
+      "badge": "Practical guides",
+      "title": "Need concrete and actionable advice?",
+      "subtitle": "Our practical guides accompany you step by step to optimize your digital campaigns, improve your website and boost your marketing performance.",
+      "p2": "Explore our content and transform your digital vision into concrete actions. Subscribe to our newsletter so you don't miss anything!"
+    },
+    "newsletter": {
+      "title": "Subscribe to our newsletter",
+      "subtitle": "Receive our best articles, digital news and practical guides directly in your mailbox.",
+      "placeholder": "Your email address",
+      "button": "Subscribe",
+      "disclaimer": "No spam, unsubscribe in one click."
+    }
+  },
+  "webdev": {
+    "hero": {
+      "title": "Web Development",
+      "subtitle": "Transform your ideas into high-performance digital solutions with Viviworks. Our team of experts develops modern web applications, custom websites and technological solutions adapted to your business needs."
+    },
+    "services": {
+      "badge": "Our development services",
+      "title": "Custom technological solutions"
+    },
+    "service": {
+      "commitments": "Our commitments",
+      "discover": "Discover this service"
+    },
+    "cta": {
+      "title": "Ready to materialize your digital project?",
+      "subtitle": "Contact us to discuss your web development needs and discover how we can help you create technological solutions that perfectly meet your objectives.",
+      "button1": "Contact us",
+      "button2": "See our achievements"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "devweb": "Web Development",
+    "marketing": "Digital Marketing",
+    "realisations": "Work",
+    "blog": "Blog",
+    "contact": "Contact",
+    "dropdown": {
+      "creation": "Website creation",
+      "fe": "Front-end development",
+      "be": "Back-end development",
+      "ux": "UX/UI Design",
+      "custom": "Custom software",
+      "devops": "DevOps",
+      "seo": "SEO & Audit",
+      "sea": "SEA / Google Ads",
+      "crm": "CRM",
+      "saas": "SaaS"
+    },
+    "marketingMenu": {
+      "marketing": "Digital Marketing",
+      "ads": "Ad Campaigns",
+      "google": "Google Ads",
+      "meta": "Meta Ads"
+    }
+  },
+  "footer": {
+    "tagline": "Your digital agency expert in web development and digital marketing. We transform your ideas into success.",
+    "services": "Services",
+    "company": "Company",
+    "contact": "Contact",
+    "legal": "Legal notice"
+  },
+  "services": {
+    "saas": {
+      "hero": { "subtitle": "Simplify your management and accelerate your growth with Viviworks SaaS solutions. Tools accessible everywhere, quick to deploy and designed to boost your performance." },
+      "power": { "title": "Unleash the power of SaaS for your business", "text": "With Viviworks SaaS solutions, you access your tools everywhere, all the time. No need to install, manage or maintain: everything is online, ready to use, secure and scalable." },
+      "costs": { "title": "Reduce your costs, gain flexibility", "text": "Forget heavy investments in software and servers. With our SaaS model, you only pay for what you need. Your teams work faster, your processes become smoother and your margins increase." },
+      "productivity": { "title": "Take productivity to the next level", "text": "A simple interface, automatic updates and connected tools: Viviworks SaaS saves you time every day. Your collaborators easily adopt the solution and you immediately benefit from better return on investment." },
+      "why": { "title": "Why choose Viviworks for your SaaS?", "p": "Choosing Viviworks means opting for a SaaS solution that adapts to your real needs and evolves with you. We combine ease of use, performance and personalized support so that your transition to the cloud becomes a real growth engine.", "li1": "Quick deployment without constraints", "li2": "Solutions adapted to your company size", "li3": "Guaranteed security and performance", "li4": "Reactive support to accompany you at every step" },
+      "cta": { "title": "The future of companies is in the cloud. Don't stay behind.", "button": "Take action today" }
+    },
+    "crm": {
+      "hero": { "title": "CRM – Manage your customer relationships with Viviworks", "subtitle": "At Viviworks, we believe that a good CRM is not just a tool... it's a growth lever. Centralize all your customer data, track your prospects and transform every interaction into a sales opportunity." },
+      "sales": { "title": "Attract, retain and develop your sales", "text": "A good CRM is not limited to storing data. At Viviworks, we implement simple, effective CRM solutions adapted to your company. You keep a complete view of your prospects and customers to better understand them, anticipate their needs and increase your commercial performance." },
+      "simplify": { "title": "Simplify your daily management", "text": "No more scattered files and lost information. Thanks to our CRM, you centralize your contacts, exchanges and opportunities in one place. You save time, improve your organization and boost your teams' productivity." },
+      "transform": { "title": "Transform your data into opportunities", "text": "With clear tracking and intelligent dashboards, you make quick and informed decisions. Analyze your performance, identify the best opportunities and adapt your actions to maximize your results." },
+      "why": { "title": "Why choose Viviworks for your CRM?", "p": "Because we do more than install a tool. We accompany you in its integration, customization and adoption by your teams. Our human and pragmatic approach helps you get the best out of your CRM, without unnecessary complexity.", "li1": "Simple and intuitive", "li2": "Designed to sell faster", "li3": "Adapted to your teams and your market", "li4": "Personalized support at every step" },
+      "cta": { "title": "Optimize your customer relationship with Viviworks.", "button": "Contact us" }
+    },
+    "creation": {
+      "hero": { "title": "Website creation", "subtitle": "A modern and high-performance website for your company" },
+      "cta": { "button": "Discover our services" }
+    },
+    "fe": {
+      "hero": { "title": "Front-end development", "subtitle": "Modern and high-performance user interfaces" },
+      "cta": { "button": "Discover our services" }
+    },
+    "be": {
+      "hero": { "title": "Back-end development", "subtitle": "Robust and secure server solutions" },
+      "cta": { "button": "Discover our services" }
+    },
+    "ux": {
+      "hero": { "title": "UX/UI Mockups", "subtitle": "User-centered designs optimized for conversion" },
+      "cta": { "button": "Discover our services" }
+    },
+    "devops": {
+      "hero": { "title": "DevOps", "subtitle": "Automate and optimize your deployments" },
+      "cta": { "button": "Discover our services" }
+    },
+    "seo": {
+      "hero": { "title": "SEO & Audit", "subtitle": "Improve your visibility in search engines" },
+      "cta": { "button": "Discover our services" }
+    },
+    "sea": {
+      "hero": { "title": "SEA / Google Ads", "subtitle": "High-performing advertising campaigns on Google" },
+      "cta": { "button": "Discover our services" }
+    }
+  }
+}

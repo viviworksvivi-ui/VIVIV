@@ -1,0 +1,322 @@
+{
+  "home": {
+    "hero": {
+      "title": "Viviworks : Une agence digitale qui booste votre croissance",
+      "subtitle": "Optimisez votre présence sur le web grâce à nos prestations en marketing digital ! Notre agence de communication digitale vous propose des services de développement web, référencement et Community management."
+    },
+    "cards": {
+      "cases": {
+        "title": "Études de cas",
+        "p1": "Depuis notre création, nous avons accompagné de nombreuses entreprises de tailles et de secteurs variés dans leur transformation digitale.",
+        "p2": "Nos études de cas montrent comment nous aidons les clients à améliorer leur e-visibilité, développer leur croissance et renforcer leur présence digitale.",
+        "p3": "Ces réussites illustrent notre mission : transformer les défis numériques en opportunités de succès.",
+        "cta": "Voir nos études de cas"
+      },
+      "portfolio": {
+        "title": "Portfolio projets",
+        "p1": "Notre portfolio reflète la diversité et la qualité de nos réalisations digitales. Chaque projet est le fruit d'une collaboration étroite avec nos clients.",
+        "p2": "Ces projets mettent en avant notre savoir-faire, notre créativité et notre capacité à répondre aux besoins uniques de chaque entreprise.",
+        "p3": "Découvrez nos réussites et comment nous avons aidé nos clients à atteindre leurs objectifs en ligne.",
+        "cta": "Découvrir notre portfolio"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Le portfolio de notre agence digitale",
+      "subtitle": "Découvrez nos projets web, études de cas et réalisations marketing qui illustrent notre savoir-faire et l'impact concret de nos solutions."
+    }
+  },
+  "realisations": {
+    "hero": {
+      "title": "Le portfolio de notre agence digitale",
+      "subtitle": "Découvrez nos projets web, études de cas et réalisations marketing qui illustrent notre savoir-faire et l'impact concret de nos solutions."
+    },
+    "caseStudies": {
+      "badge": "Études de cas",
+      "headline": "Chaque étude de cas met en lumière la manière dont nous avons aidé nos clients à atteindre leurs objectifs grâce à des stratégies digitales sur mesure.",
+      "desc": "De l'amélioration de la visibilité en ligne à l'augmentation des ventes, nos études de cas démontrent la valeur ajoutée de notre expertise en marketing digital.",
+      "cta": "Découvrez comment nos solutions concrètes se traduisent en résultats mesurables pour nos clients."
+    },
+    "portfolio": {
+      "badge": "Portfolio projets",
+      "headline": "Nos projets web et nos réalisations marketing reflètent notre créativité et notre capacité à répondre aux besoins uniques de chaque entreprise.",
+      "desc1": "De la conception de sites internet performants à la mise en place de campagnes digitales impactantes, notre portfolio illustre la diversité et la qualité de nos réalisations.",
+      "desc2": "Chaque projet est pensé pour maximiser la visibilité et la croissance de nos clients."
+    },
+    "cta": {
+      "title": "Vous souhaitez rejoindre nos prochaines réussites ?",
+      "subtitle": "Contactez-nous pour discuter de votre projet digital.",
+      "button1": "Contactez-nous",
+      "button2": "Découvrir nos services"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contactez-nous",
+      "subtitle": "Prêt à transformer votre présence digitale ? Parlons de votre projet."
+    },
+    "form": {
+      "firstName": "Prénom *",
+      "firstNamePlaceholder": "Votre prénom",
+      "lastName": "Nom *",
+      "lastNamePlaceholder": "Votre nom",
+      "email": "Email *",
+      "emailPlaceholder": "votre@email.com",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+33665758583",
+      "company": "Entreprise",
+      "companyPlaceholder": "Nom de votre entreprise",
+      "service": "Service souhaité *",
+      "servicePlaceholder": "Sélectionnez un service",
+      "message": "Message *",
+      "messagePlaceholder": "Décrivez votre projet, vos objectifs et vos attentes...",
+      "submit": "Envoyer ma demande",
+      "privacy": "En soumettant ce formulaire, vous acceptez notre politique de confidentialité."
+    },
+    "info": {
+      "title": "Nos Coordonnées",
+      "call": "Appeler maintenant",
+      "email": "Email direct"
+    },
+    "map": {
+      "title": "Venez Nous Rencontrer",
+      "subtitle": "Notre bureau est situé à Londres. Prenez rendez-vous pour discuter de votre projet autour d'un café.",
+      "cardTitle": "Carte Interactive",
+      "address": "24-26 Arcadia Avenue, Londres, N3 2JU",
+      "button": "Voir sur Google Maps"
+    },
+    "faq": {
+      "title": "Questions Fréquentes",
+      "q1": {
+        "question": "Quel est le délai moyen pour un projet ?",
+        "answer": "Les délais varient selon la complexité : 2-4 semaines pour un site vitrine, 2-3 mois pour un e-commerce, 3-6 mois pour une application web complexe."
+      },
+      "q2": {
+        "question": "Proposez-vous un suivi après livraison ?",
+        "answer": "Oui, nous offrons 3 mois de support gratuit après livraison, puis des contrats de maintenance adaptés à vos besoins."
+      },
+      "q3": {
+        "question": "Travaillez-vous avec des entreprises de toutes tailles ?",
+        "answer": "Absolument ! Nous accompagnons aussi bien les startups que les grandes entreprises, en adaptant nos solutions à votre budget et vos objectifs."
+      },
+      "q4": {
+        "question": "Comment se déroule un projet type ?",
+        "answer": "Analyse des besoins → Devis détaillé → Conception/Design → Développement → Tests → Formation → Livraison → Suivi."
+      }
+    }
+  },
+  "marketing": {
+    "metaAds": {
+      "hero": {
+        "title": "Boostez votre notoriété et générez des conversions avec Meta Ads",
+        "subtitle": "Des publicités ciblées sur Facebook, Instagram et Messenger."
+      },
+      "intro": {
+        "title": "Nos Services Meta Ads",
+        "p1": "Les Meta Ads vous permettent d'atteindre un public très large et hyper-ciblé sur les plateformes les plus populaires du monde : Facebook, Instagram et Messenger.",
+        "p2": "Que ce soit pour des objectifs de notoriété ou de conversion, Meta Ads vous aide à toucher la bonne audience avec des publicités visuelles et engageantes."
+      },
+      "why": {
+        "title": "Pourquoi choisir Meta Ads avec Viviworks ?"
+      },
+      "cta": {
+        "title": "Votre prochaine étape",
+        "subtitle": "Lancez-vous dans l'univers des publicités sociales avec Viviworks. Nous vous aidons à construire des campagnes Meta Ads sur mesure pour accroître votre présence en ligne et booster vos conversions.",
+        "button1": "Nous contacter",
+        "button2": "Voir nos réalisations"
+      }
+    },
+    "campaigns": {
+      "hero": {
+        "title": "Campagnes Publicitaires",
+        "subtitle": "Boostez votre visibilité et atteignez vos objectifs commerciaux grâce à des campagnes publicitaires ciblées et performantes.",
+        "p2": "Chez Viviworks, nous créons des campagnes sur-mesure, que ce soit sur Google Ads ou Meta Ads, pour maximiser votre retour sur investissement.",
+        "button1": "Démarrer votre campagne",
+        "button2": "Voir nos réalisations"
+      },
+      "googleAds": {
+        "title": "Google Ads",
+        "subtitle": "Touchez vos clients potentiels exactement là où ils cherchent",
+        "p1": "Les campagnes Google Ads sont un levier puissant pour vous aider à capter des prospects qualifiés au moment précis où ils expriment un besoin.",
+        "p2": "Nous optimisons vos annonces afin de vous faire apparaître en première position sur les moteurs de recherche, tout en maximisant l'efficacité de chaque dépense publicitaire."
+      },
+      "metaAds": {
+        "title": "Meta Ads (Facebook, Instagram, Messenger…)",
+        "subtitle": "Captez l'attention de vos clients là où ils passent le plus de temps",
+        "p1": "Avec Meta Ads, nous vous aidons à concevoir des publicités qui génèrent de l'engagement, du trafic et des conversions sur les plateformes sociales les plus populaires du monde : Facebook, Instagram et Messenger.",
+        "p2": "Notre approche est basée sur des segments d'audience finement ciblés et des visuels percutants."
+      },
+      "why": {
+        "title": "Pourquoi choisir Viviworks pour vos campagnes publicitaires ?"
+      },
+      "cta": {
+        "title": "Prêt à démarrer votre campagne publicitaire ?",
+        "subtitle": "Que vous soyez intéressé par Google Ads ou Meta Ads, Viviworks est là pour maximiser l'impact de vos publicités en ligne et générer des résultats concrets.",
+        "button1": "Nous contacter",
+        "button2": "Voir nos réalisations"
+      }
+    },
+    "googleAds": {
+      "hero": {
+        "title": "Boostez votre visibilité avec Google Ads",
+        "subtitle": "Touchez vos clients au bon moment, au bon endroit avec des campagnes Google Ads optimisées.",
+        "button1": "Démarrer votre campagne",
+        "button2": "Voir nos réalisations"
+      },
+      "intro": {
+        "title": "Pourquoi Google Ads ?",
+        "p1": "Google Ads vous permet d'apparaître en première position des résultats de recherche Google pour des mots-clés stratégiques.",
+        "p2": "C'est le moyen le plus efficace de capter des prospects qualifiés au moment précis où ils expriment un besoin."
+      },
+      "why": {
+        "title": "Pourquoi choisir Viviworks pour Google Ads ?"
+      },
+      "cta": {
+        "title": "Prêt à booster votre visibilité ?",
+        "subtitle": "Contactez-nous pour discuter de votre stratégie Google Ads et découvrir comment nous pouvons vous aider à atteindre vos objectifs commerciaux.",
+        "button1": "Nous contacter",
+        "button2": "Voir nos réalisations"
+      }
+    },
+    "hero": {
+      "title": "Marketing Digital",
+      "subtitle": "Faites rayonner votre présence en ligne avec Viviworks. Notre équipe vous accompagne dans la mise en place de stratégies digitales efficaces et personnalisées pour booster votre visibilité, attirer vos clients et maximiser vos résultats."
+    },
+    "services": {
+      "badge": "Nos services marketing digital",
+      "title": "Des solutions sur mesure pour votre croissance"
+    },
+    "cta": {
+      "title": "Envie d'accélérer votre croissance ?",
+      "subtitle": "Chez Viviworks, on ne se contente pas de cliquer sur \"Booster la publication\". On conçoit des stratégies data-driven qui parlent à vos clients et répondent à vos objectifs business.",
+      "button1": "Prenez contact",
+      "button2": "Découvrez nos réalisations"
+    }
+  },
+  "blog": {
+    "hero": {
+      "title": "Blog Marketing Digital – Inspirations et conseils",
+      "subtitle": "Retrouvez nos articles, actualités digitales et guides pratiques pour rester à la pointe du marketing et du web."
+    },
+    "articles": {
+      "badge": "Nos articles",
+      "title": "Nos articles approfondis vous offrent une analyse experte des tendances, outils et stratégies qui transforment le digital.",
+      "subtitle": "Conçus pour vous inspirer et vous guider, ils vous aident à prendre les bonnes décisions pour votre entreprise."
+    },
+    "guides": {
+      "badge": "Guides pratiques",
+      "title": "Besoin de conseils concrets et actionnables ?",
+      "subtitle": "Nos guides pratiques vous accompagnent pas à pas pour optimiser vos campagnes digitales, améliorer votre site web et booster vos performances marketing.",
+      "p2": "Explorez nos contenus et transformez votre vision digitale en actions concrètes. Abonnez-vous à notre newsletter pour ne rien manquer !"
+    },
+    "newsletter": {
+      "title": "Abonnez-vous à notre newsletter",
+      "subtitle": "Recevez nos meilleurs articles, actualités digitales et guides pratiques directement dans votre boîte mail.",
+      "placeholder": "Votre adresse email",
+      "button": "S'abonner",
+      "disclaimer": "Pas de spam, désabonnement en un clic."
+    }
+  },
+  "webdev": {
+    "hero": {
+      "title": "Développement Web",
+      "subtitle": "Transformez vos idées en solutions digitales performantes avec Viviworks. Notre équipe d'experts développe des applications web modernes, des sites internet sur-mesure et des solutions technologiques adaptées à vos besoins métier."
+    },
+    "services": {
+      "badge": "Nos services développement",
+      "title": "Des solutions technologiques sur mesure"
+    },
+    "service": {
+      "commitments": "Nos engagements",
+      "discover": "Découvrir ce service"
+    },
+    "cta": {
+      "title": "Prêt à concrétiser votre projet digital ?",
+      "subtitle": "Contactez-nous pour discuter de vos besoins en développement web et découvrir comment nous pouvons vous aider à créer des solutions technologiques qui répondent parfaitement à vos objectifs.",
+      "button1": "Contactez-nous",
+      "button2": "Voir nos réalisations"
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "devweb": "Développement Web",
+    "marketing": "Marketing Digital",
+    "realisations": "Réalisations",
+    "blog": "Blog",
+    "contact": "Contact",
+    "dropdown": {
+      "creation": "Création de site web",
+      "fe": "Développement Front-end",
+      "be": "Développement Back-end",
+      "ux": "UX/UI Design",
+      "custom": "Logiciels sur mesure",
+      "devops": "DevOps",
+      "seo": "SEO & Audit",
+      "sea": "SEA / Google Ads",
+      "crm": "CRM",
+      "saas": "SaaS"
+    },
+    "marketingMenu": {
+      "marketing": "Marketing Digital",
+      "ads": "Campagnes Publicitaires",
+      "google": "Google Ads",
+      "meta": "Meta Ads"
+    }
+  },
+  "footer": {
+    "tagline": "Votre agence digitale experte en développement web et marketing digital. Nous transformons vos idées en succès.",
+    "services": "Services",
+    "company": "Entreprise",
+    "contact": "Contact",
+    "legal": "Mentions légales"
+  },
+  "services": {
+    "saas": {
+      "hero": { "subtitle": "Simplifiez votre gestion et accélérez votre croissance avec les solutions SaaS Viviworks. Des outils accessibles partout, rapides à déployer et pensés pour booster vos performances." },
+      "power": { "title": "Libérez la puissance du SaaS pour votre entreprise", "text": "Avec les solutions SaaS Viviworks, vous accédez à vos outils partout, tout le temps. Plus besoin d'installer, de gérer ou de maintenir : tout est en ligne, prêt à l'emploi, sécurisé et évolutif." },
+      "costs": { "title": "Réduisez vos coûts, gagnez en flexibilité", "text": "Oubliez les investissements lourds en logiciels et serveurs. Avec notre modèle SaaS, vous ne payez que ce dont vous avez besoin. Vos équipes travaillent plus vite, vos process deviennent plus fluides et vos marges augmentent." },
+      "productivity": { "title": "Passez au niveau supérieur en productivité", "text": "Une interface simple, des mises à jour automatiques et des outils connectés : le SaaS Viviworks vous fait gagner du temps chaque jour. Vos collaborateurs adoptent facilement la solution et vous bénéficiez immédiatement d'un meilleur retour sur investissement." },
+      "why": { "title": "Pourquoi choisir Viviworks pour votre SaaS ?", "p": "Choisir Viviworks, c'est opter pour une solution SaaS qui s'adapte à vos besoins réels et qui évolue avec vous. Nous combinons simplicité d'utilisation, performance et accompagnement personnalisé pour que votre transition vers le cloud devienne un véritable moteur de croissance.", "li1": "Déploiement rapide et sans contraintes", "li2": "Solutions adaptées à la taille de votre entreprise", "li3": "Sécurité et performance garanties", "li4": "Support réactif pour vous accompagner à chaque étape" },
+      "cta": { "title": "Le futur des entreprises est dans le cloud. Ne restez pas à la traîne.", "button": "Passez à l'action dès aujourd'hui" }
+    },
+    "crm": {
+      "hero": { "title": "CRM – Gérez vos relations clients avec Viviworks", "subtitle": "Chez Viviworks, nous croyons qu'un bon CRM n'est pas seulement un outil… c'est un levier de croissance. Centralisez toutes vos données clients, suivez vos prospects et transformez chaque interaction en opportunité de vente." },
+      "sales": { "title": "Attirez, fidélisez et développez vos ventes", "text": "Un bon CRM ne se limite pas à stocker des données. Chez Viviworks, nous mettons en place des solutions CRM simples, efficaces et adaptées à votre entreprise. Vous gardez une vue complète sur vos prospects et clients pour mieux les comprendre, anticiper leurs besoins et augmenter vos performances commerciales." },
+      "simplify": { "title": "Simplifiez votre gestion au quotidien", "text": "Fini les fichiers dispersés et les informations perdues. Grâce à notre CRM, vous centralisez vos contacts, vos échanges et vos opportunités en un seul endroit. Vous gagnez du temps, améliorez votre organisation et boostez la productivité de vos équipes." },
+      "transform": { "title": "Transformez vos données en opportunités", "text": "Avec un suivi clair et des tableaux de bord intelligents, vous prenez des décisions rapides et éclairées. Analysez vos performances, identifiez les meilleures opportunités et adaptez vos actions pour maximiser vos résultats." },
+      "why": { "title": "Pourquoi choisir Viviworks pour votre CRM ?", "p": "Parce que nous faisons plus qu'installer un outil. Nous vous accompagnons dans son intégration, sa personnalisation et son adoption par vos équipes. Notre approche humaine et pragmatique vous aide à tirer le meilleur parti de votre CRM, sans complexité inutile.", "li1": "Simple et intuitif", "li2": "Pensé pour vendre plus vite", "li3": "Adapté à vos équipes et à votre marché", "li4": "Accompagnement personnalisé à chaque étape" },
+      "cta": { "title": "Optimisez votre relation client avec Viviworks.", "button": "Contactez-nous" }
+    },
+    "creation": {
+      "hero": { "title": "Création de site web", "subtitle": "Un site web moderne et performant pour votre entreprise" },
+      "cta": { "button": "Découvrir nos services" }
+    },
+    "fe": {
+      "hero": { "title": "Développement Front-end", "subtitle": "Des interfaces utilisateur modernes et performantes" },
+      "cta": { "button": "Découvrir nos services" }
+    },
+    "be": {
+      "hero": { "title": "Développement Back-end", "subtitle": "Des solutions serveur robustes et sécurisées" },
+      "cta": { "button": "Découvrir nos services" }
+    },
+    "ux": {
+      "hero": { "title": "Maquettes UX/UI", "subtitle": "Des designs centrés utilisateur et optimisés pour la conversion" },
+      "cta": { "button": "Découvrir nos services" }
+    },
+    "devops": {
+      "hero": { "title": "DevOps", "subtitle": "Automatisez et optimisez vos déploiements" },
+      "cta": { "button": "Découvrir nos services" }
+    },
+    "seo": {
+      "hero": { "title": "SEO & Audit", "subtitle": "Améliorez votre visibilité dans les moteurs de recherche" },
+      "cta": { "button": "Découvrir nos services" }
+    },
+    "sea": {
+      "hero": { "title": "SEA / Google Ads", "subtitle": "Des campagnes publicitaires performantes sur Google" },
+      "cta": { "button": "Découvrir nos services" }
+    }
+  }
+}
