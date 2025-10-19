@@ -1,0 +1,34 @@
+# robots.txt pour Viviworks
+# https://viviworks.ai
+
+User-agent: *
+Allow: /
+
+# Pages principales
+Allow: /
+Allow: /services
+Allow: /realisations
+Allow: /blog
+Allow: /a-propos
+Allow: /contact
+
+# Sitemap
+Sitemap: https://viviworks.ai/sitemap.xml
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /_next/
+Disallow: /payment/
+
+# Allow images and assets
+Allow: /images/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Crawl-delay (optional, for politeness)
+Crawl-delay: 1
+
