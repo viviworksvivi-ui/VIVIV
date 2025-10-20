@@ -15,8 +15,16 @@ export const metadata: Metadata = {
   generator: "v0.app",
   keywords: "agence digitale, développement web, SEO, SEA, DevOps, UX/UI, marketing digital",
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/icooo.ico', sizes: 'any' },
+      { url: '/images/vivi-logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/vivi-logo.png', sizes: '192x192', type: 'image/png' },
+      { url: '/images/vivi-logo.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: '/images/vivi-logo.png',
+    shortcut: '/images/vivi-logo.png',
   },
+  manifest: '/manifest.json',
 }
 
 export default function RootLayout({
@@ -27,6 +35,17 @@ export default function RootLayout({
   return (
     <html lang="fr" className="dark" suppressHydrationWarning>
       <head>
+        {/* Favicon and icons - High quality PNG for better visibility */}
+        <link rel="icon" type="image/x-icon" href="/icooo.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/vivi-logo.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/vivi-logo.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/images/vivi-logo.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/vivi-logo.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#4a9fd9" />
+        <meta name="msapplication-TileColor" content="#4a9fd9" />
+        <meta name="msapplication-TileImage" content="/images/vivi-logo.png" />
+        
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDV9ZX9FN3"></script>
         <script
