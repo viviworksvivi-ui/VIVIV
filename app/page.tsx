@@ -2,6 +2,7 @@
 
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { DynamicHeroText } from "@/components/dynamic-hero-text"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -35,7 +36,7 @@ export default function HomePage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[70vh] sm:min-h-[60vh] flex items-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -58,15 +59,13 @@ export default function HomePage() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-blob z-10" style={{ animationDelay: "2s" }}></div>
 
         {/* Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-20">
-          <div className="max-w-4xl">
-            <div className="space-y-8 animate-slide-in-up">
-              <div className="space-y-6">
-                <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-balance text-white drop-shadow-2xl">
-                  {t('home.hero.title')}
-                </h1>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-12 sm:py-16 md:py-20">
+          <div className="max-w-4xl mx-auto text-center sm:text-left">
+            <div className="space-y-6 sm:space-y-8 animate-slide-in-up">
+              <div className="space-y-4 sm:space-y-6">
+                <DynamicHeroText />
 
-                <p className="text-xl lg:text-2xl leading-relaxed text-pretty text-white/90 drop-shadow-lg max-w-3xl">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-pretty text-white/90 drop-shadow-lg max-w-3xl mx-auto sm:mx-0">
                   {t('home.hero.subtitle')}
                 </p>
               </div>
@@ -74,13 +73,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce-down">
-          <div className="flex flex-col items-center gap-2 text-white/60 hover:text-white transition-colors cursor-pointer">
-            <span className="text-xs font-medium">Découvrir</span>
-            <ChevronDown className="h-6 w-6" />
-          </div>
-        </div>
       </section>
 
       {/* Services Section */}
