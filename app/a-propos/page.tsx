@@ -85,7 +85,7 @@ const teamMembers = [
   { name: "Sylvio", role: "Créateur de vidéo réseaux sociaux", photo: "/Sylvio.webp" },
   { name: "Junior", role: "Développeur IA web et application", photo: "/Junior .webp" },
   { name: "Mickaëlio", role: "Développeur application et web", photo: "/Mickaëlio.webp" },
-  { name: "Mohamed Habib", role: "Développeur applications mobiles et web", photo: "/Mohamed habib .webp" },
+  { name: "Mohamed Habib", role: "Développeur applications mobiles et web", photo: "/Mohamed habib .webp", objectPosition: "center 30%" },
   { name: "Nahyl", role: "Développeur web et application", photo: "/Nahyl.webp" },
   { name: "Tino", role: "Designer UX/UI", photo: "/Tino.webp" },
   { name: "Tatiana", role: "Community manager", photo: "/Tatiana.webp" }
