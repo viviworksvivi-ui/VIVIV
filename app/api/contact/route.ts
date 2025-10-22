@@ -13,13 +13,42 @@ export async function POST(request: Request) {
         user: 'viviworksvivi@gmail.com',
         pass: 'bsat plwy zqnt qgyl', // App password
       },
+      tls: {
+        rejectUnauthorized: false
+      }
     })
 
     // Email pour Viviworks
     const mailOptionsToAdmin = {
-      from: 'viviworksvivi@gmail.com',
+      from: {
+        name: 'Viviworks Contact Form',
+        address: 'viviworksvivi@gmail.com'
+      },
+      replyTo: email,
       to: 'viviworksvivi@gmail.com',
       subject: `Nouveau message de contact - ${firstName} ${lastName}`,
+      headers: {
+        'X-Priority': '3',
+        'X-Mailer': 'Viviworks Contact System'
+      },
+      text: `
+Nouveau message de contact
+
+Informations du contact:
+------------------------
+Nom complet: ${firstName} ${lastName}
+Email: ${email}
+${phone ? `Téléphone: ${phone}` : ''}
+${company ? `Entreprise: ${company}` : ''}
+${country ? `Pays: ${country}` : ''}
+${service ? `Service: ${service}` : ''}
+
+Message:
+--------
+${message}
+
+Reçu le ${new Date().toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
+      `,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f5f5f5;">
           <div style="background: linear-gradient(135deg, #4a9fd9 0%, #8b5a3c 100%); padding: 30px; border-radius: 10px 10px 0 0;">
@@ -343,9 +372,48 @@ export async function POST(request: Request) {
 
     // Email de confirmation au client
     const mailOptionsToClient = {
-      from: 'viviworksvivi@gmail.com',
+      from: {
+        name: 'Viviworks',
+        address: 'viviworksvivi@gmail.com'
+      },
+      replyTo: 'viviworksvivi@gmail.com',
       to: email,
       subject: `Viviworks - Découvrez nos packages ${service || 'pour votre projet'}`,
+      headers: {
+        'X-Priority': '3',
+        'X-Mailer': 'Viviworks Contact System',
+        'Importance': 'Normal',
+        'X-MSMail-Priority': 'Normal'
+      },
+      text: `
+Merci ${firstName} !
+
+Bonjour ${firstName} ${lastName},
+
+Nous vous confirmons la bonne réception de votre demande concernant ${service || 'votre projet'}.
+
+Prochaines étapes:
+- Notre équipe va analyser votre demande
+- Nous vous recontacterons sous 24 heures
+- Un expert dédié sera assigné à votre projet
+
+Pour procéder au paiement et réserver votre package, visitez:
+https://viviw.netlify.app/paiement
+
+Besoin d'aide pour choisir ? Notre équipe d'experts est là pour vous conseiller.
+Prenez rendez-vous: https://viviw.netlify.app/contact
+
+En attendant, n'hésitez pas à consulter notre blog ou nos réalisations:
+- Blog: https://viviw.netlify.app/blog
+- Réalisations: https://viviw.netlify.app/realisations
+
+L'équipe Viviworks
+Email: contact@viviworks.ai
+Téléphone: +33 6 65 75 85 83
+Site web: www.viviworks.ai
+
+© 2024 Viviworks. Tous droits réservés.
+      `,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f5f5f5;">
           <div style="background: linear-gradient(135deg, #4a9fd9 0%, #8b5a3c 100%); padding: 40px 30px; border-radius: 10px 10px 0 0; text-align: center;">
