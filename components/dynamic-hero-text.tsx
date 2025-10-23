@@ -67,9 +67,9 @@ export function DynamicHeroText({ language = "fr" }: DynamicHeroTextProps) {
             {language === "fr" ? "Une agence digitale qui " : "A digital agency that "}
           </span>
           <span className="relative block sm:inline-block align-bottom min-h-[1.2em] sm:min-w-[200px] md:min-w-[300px] lg:min-w-[450px]">
-            <span className="bg-gradient-to-r from-[#4a9fd9] via-[#5eb3e4] to-[#8b5a3c] bg-clip-text text-transparent font-extrabold">
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent font-extrabold drop-shadow-[0_2px_10px_rgba(96,165,250,0.8)]">
               {displayText}
-              <span className="inline-block w-0.5 h-[0.9em] bg-[#4a9fd9] animate-pulse ml-1 align-middle"></span>
+              <span className="inline-block w-0.5 h-[0.9em] bg-cyan-400 animate-pulse ml-1 align-middle shadow-[0_0_10px_rgba(34,211,238,0.8)]"></span>
             </span>
           </span>
         </span>
