@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Badge } from "@/components/ui/badge"
 import { packages } from "@/lib/stripe"
-import { Check, CreditCard, Loader2, ShieldCheck, Lock } from "lucide-react"
+import { Check, CreditCard, Loader2, ShieldCheck, Lock, Mail } from "lucide-react"
 import { useState } from "react"
 import { loadStripe } from "@stripe/stripe-js"
 
@@ -19,6 +19,52 @@ export default function PaymentPage() {
   const [customerEmail, setCustomerEmail] = useState("")
   const [customerName, setCustomerName] = useState("")
   const [isLoading, setIsLoading] = useState(false)
+  const [isSendingEmail, setIsSendingEmail] = useState(false)
+  const [emailStatus, setEmailStatus] = useState<{type: 'success' | 'error', message: string} | null>(null)
+
+  const handleSendEmail = async () => {
+    if (!selectedPackage || !customerEmail || !customerName) {
+      setEmailStatus({ type: 'error', message: 'Veuillez remplir tous les champs' })
+      return
+    }
+
+    setIsSendingEmail(true)
+    setEmailStatus(null)
+
+    try {
+      const response = await fetch('/api/send-package-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          packageId: selectedPackage,
+          customerEmail,
+          customerName,
+        }),
+      })
+
+      if (response.ok) {
+        setEmailStatus({ 
+          type: 'success', 
+          message: `✓ Email envoyé avec succès à ${customerEmail}` 
+        })
+      } else {
+        setEmailStatus({ 
+          type: 'error', 
+          message: 'Erreur lors de l\'envoi de l\'email' 
+        })
+      }
+    } catch (error) {
+      console.error('Erreur:', error)
+      setEmailStatus({ 
+        type: 'error', 
+        message: 'Erreur lors de l\'envoi de l\'email' 
+      })
+    } finally {
+      setIsSendingEmail(false)
+    }
+  }
 
   const handlePayment = async () => {
     if (!selectedPackage || !customerEmail || !customerName) {
@@ -341,24 +387,56 @@ export default function PaymentPage() {
                   </div>
                 </div>
 
-                <Button
-                  onClick={handlePayment}
-                  disabled={isLoading}
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90"
-                >
-                  {isLoading ? (
-                    <>
-                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                      Chargement...
-                    </>
-                  ) : (
-                    <>
-                      <ShieldCheck className="mr-2 h-5 w-5" />
-                      Procéder au paiement sécurisé
-                    </>
-                  )}
-                </Button>
+                {emailStatus && (
+                  <div className={`p-4 rounded-lg ${
+                    emailStatus.type === 'success' 
+                      ? 'bg-green-500/10 border border-green-500/20 text-green-600' 
+                      : 'bg-red-500/10 border border-red-500/20 text-red-600'
+                  }`}>
+                    <p className="text-sm font-medium">{emailStatus.message}</p>
+                  </div>
+                )}
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Button
+                    onClick={handleSendEmail}
+                    disabled={isSendingEmail || isLoading}
+                    size="lg"
+                    variant="outline"
+                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                  >
+                    {isSendingEmail ? (
+                      <>
+                        <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                        Envoi en cours...
+                      </>
+                    ) : (
+                      <>
+                        <Mail className="mr-2 h-5 w-5" />
+                        Recevoir par email
+                      </>
+                    )}
+                  </Button>
+
+                  <Button
+                    onClick={handlePayment}
+                    disabled={isLoading || isSendingEmail}
+                    size="lg"
+                    className="w-full bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90"
+                  >
+                    {isLoading ? (
+                      <>
+                        <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                        Chargement...
+                      </>
+                    ) : (
+                      <>
+                        <ShieldCheck className="mr-2 h-5 w-5" />
+                        Payer maintenant
+                      </>
+                    )}
+                  </Button>
+                </div>
 
                 <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center gap-1">
