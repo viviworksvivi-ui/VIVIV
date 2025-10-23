@@ -50,8 +50,18 @@ export async function POST(request: Request) {
     return NextResponse.json({ sessionId: session.id, url: session.url })
   } catch (error) {
     console.error('Erreur création session Stripe:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Erreur inconnue'
+    console.error('Message d\'erreur détaillé:', errorMessage)
+    console.error('Variables d\'environnement:', {
+      hasPublishableKey: !!process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
+      hasSecretKey: !!process.env.STRIPE_SECRET_KEY,
+      publishableKeyPrefix: process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY?.substring(0, 10),
+    })
     return NextResponse.json(
-      { error: 'Erreur lors de la création de la session de paiement' },
+      { 
+        error: 'Erreur lors de la création de la session de paiement',
+        details: errorMessage 
+      },
       { status: 500 }
     )
   }
