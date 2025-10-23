@@ -9,10 +9,8 @@ import { Label } from "@/components/ui/label"
 import { Badge } from "@/components/ui/badge"
 import { packages } from "@/lib/stripe"
 import { Check, CreditCard, Loader2, ShieldCheck, Lock, Mail } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { loadStripe } from "@stripe/stripe-js"
-
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
 
 export default function PaymentPage() {
   const [selectedPackage, setSelectedPackage] = useState<string>("")
@@ -21,6 +19,18 @@ export default function PaymentPage() {
   const [isLoading, setIsLoading] = useState(false)
   const [isSendingEmail, setIsSendingEmail] = useState(false)
   const [emailStatus, setEmailStatus] = useState<{type: 'success' | 'error', message: string} | null>(null)
+  const [stripeError, setStripeError] = useState<string | null>(null)
+
+  // Charger Stripe côté client uniquement
+  useEffect(() => {
+    const publicKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+    if (!publicKey) {
+      console.error('Clé publique Stripe manquante')
+      setStripeError('Configuration Stripe manquante. Veuillez contacter le support.')
+    } else {
+      console.log('Clé Stripe chargée:', publicKey.substring(0, 20) + '...')
+    }
+  }, [])
 
   const handleSendEmail = async () => {
     if (!selectedPackage || !customerEmail || !customerName) {
@@ -118,6 +128,15 @@ export default function PaymentPage() {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Sélectionnez le package qui correspond à vos besoins et procédez au paiement sécurisé via Stripe
             </p>
+            
+            {stripeError && (
+              <div className="mt-6 max-w-2xl mx-auto p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+                <p className="text-red-600 font-medium">{stripeError}</p>
+                <p className="text-sm text-red-500 mt-2">
+                  Veuillez nous contacter à contact@viviworks.ai
+                </p>
+              </div>
+            )}
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
