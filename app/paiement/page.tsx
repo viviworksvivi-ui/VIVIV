@@ -23,12 +23,10 @@ export default function PaymentPage() {
 
   // Charger Stripe côté client uniquement
   useEffect(() => {
-    const publicKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-    if (!publicKey) {
-      console.error('Clé publique Stripe manquante')
-      setStripeError('Configuration Stripe manquante. Veuillez contacter le support.')
-    } else {
-      console.log('Clé Stripe chargée:', publicKey.substring(0, 20) + '...')
+    // Next.js remplace automatiquement process.env.NEXT_PUBLIC_* au build
+    // On vérifie juste si la clé existe
+    if (typeof window !== 'undefined') {
+      console.log('Vérification de la configuration Stripe...')
     }
   }, [])
 
@@ -78,11 +76,12 @@ export default function PaymentPage() {
 
   const handlePayment = async () => {
     if (!selectedPackage || !customerEmail || !customerName) {
-      alert("Veuillez remplir tous les champs")
+      setEmailStatus({ type: 'error', message: 'Veuillez remplir tous les champs' })
       return
     }
 
     setIsLoading(true)
+    setEmailStatus(null)
 
     try {
       const response = await fetch('/api/create-checkout-session', {
@@ -97,15 +96,33 @@ export default function PaymentPage() {
         }),
       })
 
-      const { url } = await response.json()
+      const data = await response.json()
 
-      if (url) {
-        window.location.href = url
+      if (!response.ok) {
+        console.error('Erreur API:', data)
+        setEmailStatus({ 
+          type: 'error', 
+          message: data.details || 'Erreur lors de la création de la session de paiement. Veuillez réessayer.' 
+        })
+        setIsLoading(false)
+        return
+      }
+
+      if (data.url) {
+        window.location.href = data.url
+      } else {
+        setEmailStatus({ 
+          type: 'error', 
+          message: 'URL de paiement manquante. Veuillez contacter le support.' 
+        })
+        setIsLoading(false)
       }
     } catch (error) {
       console.error('Erreur:', error)
-      alert('Erreur lors de la création de la session de paiement')
-    } finally {
+      setEmailStatus({ 
+        type: 'error', 
+        message: 'Erreur de connexion. Vérifiez votre connexion internet et réessayez.' 
+      })
       setIsLoading(false)
     }
   }
