@@ -6,6 +6,16 @@ import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen } from "lucide-react"
 import Link from "next/link"
 
+// Generate static params for static export
+export async function generateStaticParams() {
+  // Return an array of possible slug values
+  return [
+    { slug: 'tendances-web-design-2024' },
+    { slug: 'guide-seo-2024' },
+    { slug: 'marketing-digital-pme' }
+  ]
+}
+
 // This would typically come from a CMS or database
 const blogPost = {
   title: "Les Tendances Web Design 2024 : Ce Qui Va Marquer l'Année",
