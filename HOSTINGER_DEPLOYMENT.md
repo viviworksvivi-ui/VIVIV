@@ -151,3 +151,6 @@ Pour garder TOUTES les fonctionnalités (formulaires, emails, Stripe) :
 1. Utilisez **Vercel** (gratuit) pour le site principal
 2. Ou passez au plan **Business Cloud Hosting** de Hostinger (supporte Node.js)
 
+
+
+

@@ -163,3 +163,6 @@ N'oubliez pas :
 
 **Félicitations !** 🎉 Votre système de paiement Stripe est maintenant en mode **PRODUCTION** et prêt à recevoir de vrais paiements !
 
+
+
+
