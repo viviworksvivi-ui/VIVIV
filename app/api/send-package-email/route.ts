@@ -36,7 +36,7 @@ export async function POST(request: Request) {
     })
 
     // Créer le lien de paiement avec le package pré-sélectionné
-    const paymentLink = `https://viviw.netlify.app/paiement?package=${packageId}&email=${encodeURIComponent(customerEmail)}&name=${encodeURIComponent(customerName)}`
+    const paymentLink = `https://viviworks.fr/paiement?package=${packageId}&email=${encodeURIComponent(customerEmail)}&name=${encodeURIComponent(customerName)}`
 
     // Email au client
     const mailOptionsToClient = {
@@ -125,7 +125,7 @@ Site web : www.viviworks.ai
             <div style="background: #f0f8ff; padding: 25px; border-radius: 10px; margin: 30px 0; text-align: center; border-left: 4px solid #4a9fd9;">
               <h3 style="color: #4a9fd9; margin: 0 0 15px 0; font-size: 18px;">🎯 Des questions ?</h3>
               <p style="color: #333; margin: 0 0 20px 0; font-size: 14px;">Notre équipe d'experts est là pour vous conseiller</p>
-              <a href="https://viviw.netlify.app/contact" style="display: inline-block; background: linear-gradient(135deg, #4a9fd9 0%, #8b5a3c 100%); color: white; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; font-size: 14px;">Nous contacter</a>
+              <a href="https://viviworks.fr/contact" style="display: inline-block; background: linear-gradient(135deg, #4a9fd9 0%, #8b5a3c 100%); color: white; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; font-size: 14px;">Nous contacter</a>
             </div>
 
             <div style="border-top: 1px solid #e0e0e0; margin-top: 30px; padding-top: 20px;">

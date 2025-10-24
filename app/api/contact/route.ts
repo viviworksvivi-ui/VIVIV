@@ -398,14 +398,14 @@ Prochaines étapes:
 - Un expert dédié sera assigné à votre projet
 
 Pour procéder au paiement et réserver votre package, visitez:
-https://viviw.netlify.app/paiement
+https://viviworks.fr/paiement
 
 Besoin d'aide pour choisir ? Notre équipe d'experts est là pour vous conseiller.
-Prenez rendez-vous: https://viviw.netlify.app/contact
+Prenez rendez-vous: https://viviworks.fr/contact
 
 En attendant, n'hésitez pas à consulter notre blog ou nos réalisations:
-- Blog: https://viviw.netlify.app/blog
-- Réalisations: https://viviw.netlify.app/realisations
+- Blog: https://viviworks.fr/blog
+- Réalisations: https://viviworks.fr/realisations
 
 L'équipe Viviworks
 Email: contact@viviworks.ai
@@ -442,19 +442,19 @@ Site web: www.viviworks.ai
             <div style="background: linear-gradient(135deg, #4a9fd9 0%, #8b5a3c 100%); padding: 30px; border-radius: 10px; margin: 30px 0; text-align: center;">
               <h3 style="color: white; margin: 0 0 15px 0; font-size: 22px;">💳 Prêt à démarrer ?</h3>
               <p style="color: rgba(255,255,255,0.9); margin: 0 0 25px 0; font-size: 16px;">Procédez au paiement sécurisé pour réserver votre package</p>
-              <a href="https://viviw.netlify.app/paiement" style="display: inline-block; background: white; color: #4a9fd9; padding: 15px 40px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">Procéder au paiement</a>
+              <a href="https://viviworks.fr/paiement" style="display: inline-block; background: white; color: #4a9fd9; padding: 15px 40px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">Procéder au paiement</a>
               <p style="color: rgba(255,255,255,0.8); margin: 20px 0 0 0; font-size: 13px;">Paiement 100% sécurisé par Stripe • SSL Crypté</p>
             </div>
 
             <div style="background: #f0f8ff; padding: 25px; border-radius: 10px; margin: 30px 0; text-align: center; border-left: 4px solid #4a9fd9;">
               <h3 style="color: #4a9fd9; margin: 0 0 15px 0; font-size: 18px;">🎯 Besoin d'aide pour choisir ?</h3>
               <p style="color: #333; margin: 0 0 20px 0; font-size: 14px;">Notre équipe d'experts est là pour vous conseiller</p>
-              <a href="https://viviw.netlify.app/contact" style="display: inline-block; background: linear-gradient(135deg, #4a9fd9 0%, #8b5a3c 100%); color: white; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; font-size: 14px;">Prendre rendez-vous</a>
+              <a href="https://viviworks.fr/contact" style="display: inline-block; background: linear-gradient(135deg, #4a9fd9 0%, #8b5a3c 100%); color: white; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; font-size: 14px;">Prendre rendez-vous</a>
             </div>
 
             <p style="color: #333; line-height: 1.8; font-size: 16px;">
-              En attendant, n'hésitez pas à consulter notre <a href="https://viviw.netlify.app/blog" style="color: #4a9fd9; text-decoration: none;">blog</a> 
-              ou nos <a href="https://viviw.netlify.app/realisations" style="color: #4a9fd9; text-decoration: none;">réalisations</a>.
+              En attendant, n'hésitez pas à consulter notre <a href="https://viviworks.fr/blog" style="color: #4a9fd9; text-decoration: none;">blog</a> 
+              ou nos <a href="https://viviworks.fr/realisations" style="color: #4a9fd9; text-decoration: none;">réalisations</a>.
             </p>
 
             <div style="border-top: 1px solid #e0e0e0; margin-top: 30px; padding-top: 20px;">
