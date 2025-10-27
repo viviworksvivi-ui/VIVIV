@@ -25,13 +25,23 @@ export async function POST(req: NextRequest) {
     const finalDescription = description?.trim() || `Package ${packageName} personnalisé pour vous`
 
     // Créer le devis côté serveur
-    const quote = addQuoteServer({
-      packageName,
-      price: Number(price),
-      clientEmail: clientEmail.toLowerCase().trim(),
-      description: finalDescription,
-      features: features || [],
-    })
+    let quote
+    try {
+      quote = addQuoteServer({
+        packageName,
+        price: Number(price),
+        clientEmail: clientEmail.toLowerCase().trim(),
+        description: finalDescription,
+        features: features || [],
+      })
+      console.log('✅ Devis créé:', quote.id)
+    } catch (error) {
+      console.error('❌ Erreur création devis:', error)
+      return NextResponse.json(
+        { error: "Erreur lors de la sauvegarde du devis: " + (error instanceof Error ? error.message : String(error)) },
+        { status: 500 }
+      )
+    }
 
     // Créer le lien de paiement
     const paymentLink = `${process.env.NEXT_PUBLIC_SITE_URL || "https://viviworks.fr"}/paiement-sur-devis?email=${encodeURIComponent(clientEmail)}`

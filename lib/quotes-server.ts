@@ -1,4 +1,5 @@
 // Gestion des devis côté serveur
+import 'server-only'
 import fs from 'fs'
 import path from 'path'
 
@@ -17,12 +18,19 @@ const QUOTES_FILE = path.join(process.cwd(), 'data', 'quotes.json')
 
 // Assurer que le dossier data existe
 function ensureDataDir() {
-  const dataDir = path.join(process.cwd(), 'data')
-  if (!fs.existsSync(dataDir)) {
-    fs.mkdirSync(dataDir, { recursive: true })
-  }
-  if (!fs.existsSync(QUOTES_FILE)) {
-    fs.writeFileSync(QUOTES_FILE, JSON.stringify([]), 'utf8')
+  try {
+    const dataDir = path.join(process.cwd(), 'data')
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true })
+      console.log('✅ Dossier data/ créé')
+    }
+    if (!fs.existsSync(QUOTES_FILE)) {
+      fs.writeFileSync(QUOTES_FILE, JSON.stringify([]), 'utf8')
+      console.log('✅ Fichier quotes.json créé')
+    }
+  } catch (error) {
+    console.error('❌ Erreur lors de la création du dossier data:', error)
+    throw error
   }
 }
 
