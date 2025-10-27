@@ -1,5 +1,5 @@
 # robots.txt pour Viviworks
-# https://viviworks.ai
+# https://viviworks.fr
 
 User-agent: *
 Allow: /
@@ -13,7 +13,7 @@ Allow: /a-propos
 Allow: /contact
 
 # Sitemap
-Sitemap: https://viviworks.ai/sitemap.xml
+Sitemap: https://viviworks.fr/sitemap.xml
 
 # Disallow admin and API routes
 Disallow: /api/

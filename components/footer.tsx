@@ -152,8 +152,8 @@ export function Footer() {
                 <div className="p-2 rounded-lg glass group-hover:bg-primary/10 transition-all">
                   <Mail className="h-4 w-4 text-primary" />
                 </div>
-                <a href="mailto:contact@viviworks.ai" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  contact@viviworks.ai
+                <a href="mailto:contact@viviworks.fr" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  contact@viviworks.fr
                 </a>
               </li>
               <li className="flex items-center space-x-3 group">

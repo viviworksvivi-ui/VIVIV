@@ -9,8 +9,7 @@ import { Label } from "@/components/ui/label"
 import { Badge } from "@/components/ui/badge"
 import { packages } from "@/lib/stripe"
 import { Check, CreditCard, Loader2, ShieldCheck, Lock, Mail } from "lucide-react"
-import { useState, useEffect } from "react"
-import { loadStripe } from "@stripe/stripe-js"
+import { useState } from "react"
 
 export default function PaymentPage() {
   const [selectedPackage, setSelectedPackage] = useState<string>("")
@@ -20,15 +19,6 @@ export default function PaymentPage() {
   const [isSendingEmail, setIsSendingEmail] = useState(false)
   const [emailStatus, setEmailStatus] = useState<{type: 'success' | 'error', message: string} | null>(null)
   const [stripeError, setStripeError] = useState<string | null>(null)
-
-  // Charger Stripe côté client uniquement
-  useEffect(() => {
-    // Next.js remplace automatiquement process.env.NEXT_PUBLIC_* au build
-    // On vérifie juste si la clé existe
-    if (typeof window !== 'undefined') {
-      console.log('Vérification de la configuration Stripe...')
-    }
-  }, [])
 
   const handleSendEmail = async () => {
     if (!selectedPackage || !customerEmail || !customerName) {
@@ -150,7 +140,7 @@ export default function PaymentPage() {
               <div className="mt-6 max-w-2xl mx-auto p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
                 <p className="text-red-600 font-medium">{stripeError}</p>
                 <p className="text-sm text-red-500 mt-2">
-                  Veuillez nous contacter à contact@viviworks.ai
+                  Veuillez nous contacter à contact@viviworks.fr
                 </p>
               </div>
             )}

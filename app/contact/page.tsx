@@ -42,7 +42,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    content: "contact@viviworks.ai",
+    content: "contact@viviworks.fr",
     description: "Réponse sous 24h",
   },
   {

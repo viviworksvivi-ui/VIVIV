@@ -7,11 +7,21 @@ import { Button } from "@/components/ui/button"
 import { CheckCircle } from "lucide-react"
 import Link from "next/link"
 import { useSearchParams } from "next/navigation"
-import { Suspense } from "react"
+import { Suspense, useEffect } from "react"
+import { markQuoteAsPaid } from "@/lib/quotes"
 
 function SuccessContent() {
   const searchParams = useSearchParams()
   const sessionId = searchParams.get('session_id')
+  const isCustomQuote = searchParams.get('custom_quote')
+  const quoteId = searchParams.get('quote_id')
+
+  useEffect(() => {
+    // Si c'est un paiement de devis personnalisé, marquer le devis comme payé
+    if (isCustomQuote === 'true' && quoteId) {
+      markQuoteAsPaid(quoteId)
+    }
+  }, [isCustomQuote, quoteId])
 
   return (
     <main className="min-h-screen">
@@ -42,11 +52,18 @@ function SuccessContent() {
 
               <div className="space-y-4">
                 <p className="text-sm text-muted-foreground">
-                  📧 Un email de confirmation vous a été envoyé avec tous les détails de votre commande.
+                  📧 Un email de confirmation vous a été envoyé avec tous les détails de votre {isCustomQuote === 'true' ? 'devis' : 'commande'}.
                 </p>
                 <p className="text-sm text-muted-foreground">
                   Notre équipe vous contactera dans les <strong>24 heures</strong> pour démarrer votre projet.
                 </p>
+                {isCustomQuote === 'true' && (
+                  <div className="bg-primary/10 p-4 rounded-lg">
+                    <p className="text-sm font-semibold text-primary">
+                      ✨ Paiement de votre devis personnalisé confirmé
+                    </p>
+                  </div>
+                )}
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">

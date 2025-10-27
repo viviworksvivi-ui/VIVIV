@@ -408,9 +408,9 @@ En attendant, n'hésitez pas à consulter notre blog ou nos réalisations:
 - Réalisations: https://viviworks.fr/realisations
 
 L'équipe Viviworks
-Email: contact@viviworks.ai
+Email: contact@viviworks.fr
 Téléphone: +33 6 65 75 85 83
-Site web: www.viviworks.ai
+Site web: www.viviworks.fr
 
 © 2024 Viviworks. Tous droits réservés.
       `,
@@ -460,9 +460,9 @@ Site web: www.viviworks.ai
             <div style="border-top: 1px solid #e0e0e0; margin-top: 30px; padding-top: 20px;">
               <p style="color: #666; line-height: 1.6; font-size: 14px; margin: 0;">
                 <strong>L'équipe Viviworks</strong><br>
-                📧 contact@viviworks.ai<br>
+                📧 contact@viviworks.fr<br>
                 📱 +33 6 65 75 85 83<br>
-                🌐 <a href="https://viviworks.ai" style="color: #4a9fd9; text-decoration: none;">www.viviworks.ai</a>
+                🌐 <a href="https://viviworks.fr" style="color: #4a9fd9; text-decoration: none;">www.viviworks.fr</a>
               </p>
             </div>
           </div>

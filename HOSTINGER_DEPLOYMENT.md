@@ -21,7 +21,7 @@
 
 1. Allez sur https://hpanel.hostinger.com
 2. Cliquez sur **"Websites"** dans le menu
-3. Sélectionnez **viviworks.ai** (ou le domaine que vous voulez utiliser)
+3. Sélectionnez **viviworks.fr** (ou le domaine que vous voulez utiliser)
 
 ### B. Accédez au File Manager
 
@@ -51,7 +51,7 @@
 2. Dans hPanel, allez dans **"FTP Accounts"**
 3. Créez un compte FTP ou utilisez celui existant
 4. Connectez-vous avec FileZilla :
-   - Host: ftp.viviworks.ai (ou votre domaine)
+   - Host: ftp.viviworks.fr (ou votre domaine)
    - Username: votre nom d'utilisateur FTP
    - Password: votre mot de passe FTP
    - Port: 21
@@ -83,26 +83,26 @@ Votre site utilise des API routes pour :
 
 ## Étape 5 : Configuration du domaine
 
-### Si vous utilisez viviworks.ai :
+### Si vous utilisez viviworks.fr :
 
 1. Dans hPanel, allez dans **"Domains"**
-2. Cliquez sur **"Manage"** à côté de viviworks.ai
+2. Cliquez sur **"Manage"** à côté de viviworks.fr
 3. Vérifiez que les DNS pointent vers Hostinger
 4. Si nécessaire, configurez :
    - Type A → IP de votre serveur Hostinger
-   - CNAME www → viviworks.ai
+   - CNAME www → viviworks.fr
 
 ## Étape 6 : SSL/HTTPS
 
 1. Dans hPanel, allez dans **"SSL"**
-2. Sélectionnez votre domaine (viviworks.ai)
+2. Sélectionnez votre domaine (viviworks.fr)
 3. Activez le certificat SSL gratuit (Let's Encrypt)
 4. Attendez 10-15 minutes pour l'activation
 
 ## Étape 7 : Tester le site
 
 1. Attendez 5 minutes après l'upload
-2. Visitez : https://viviworks.ai
+2. Visitez : https://viviworks.fr
 3. Vérifiez que toutes les pages fonctionnent
 4. Testez la navigation
 

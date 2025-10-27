@@ -47,7 +47,7 @@ Pour les nouvelles adresses ou celles peu utilisées :
 
 Pour améliorer la délivrabilité, configurez ces enregistrements DNS :
 
-#### Si vous utilisez un domaine personnalisé (ex: contact@viviworks.ai)
+#### Si vous utilisez un domaine personnalisé (ex: contact@viviworks.fr)
 
 1. **SPF** : Autorise Gmail à envoyer des emails pour votre domaine
    ```
