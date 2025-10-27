@@ -8,7 +8,6 @@ import { CheckCircle } from "lucide-react"
 import Link from "next/link"
 import { useSearchParams } from "next/navigation"
 import { Suspense, useEffect } from "react"
-import { markQuoteAsPaid } from "@/lib/quotes"
 
 function SuccessContent() {
   const searchParams = useSearchParams()
@@ -17,9 +16,13 @@ function SuccessContent() {
   const quoteId = searchParams.get('quote_id')
 
   useEffect(() => {
-    // Si c'est un paiement de devis personnalisé, marquer le devis comme payé
+    // Si c'est un paiement de devis personnalisé, marquer le devis comme payé via API
     if (isCustomQuote === 'true' && quoteId) {
-      markQuoteAsPaid(quoteId)
+      fetch("/api/admin/quotes", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: quoteId }),
+      }).catch(console.error)
     }
   }, [isCustomQuote, quoteId])
 

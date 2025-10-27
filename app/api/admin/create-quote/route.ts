@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 import nodemailer from "nodemailer"
+import { addQuoteServer } from "@/lib/quotes-server"
 
 export async function POST(req: NextRequest) {
   try {
@@ -23,17 +24,14 @@ export async function POST(req: NextRequest) {
     // Si pas de description, en générer une automatique
     const finalDescription = description?.trim() || `Package ${packageName} personnalisé pour vous`
 
-    // Créer le devis
-    const quote = {
-      id: `quote_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    // Créer le devis côté serveur
+    const quote = addQuoteServer({
       packageName,
       price: Number(price),
       clientEmail: clientEmail.toLowerCase().trim(),
       description: finalDescription,
       features: features || [],
-      createdAt: new Date().toISOString(),
-      paid: false,
-    }
+    })
 
     // Créer le lien de paiement
     const paymentLink = `${process.env.NEXT_PUBLIC_SITE_URL || "https://viviworks.fr"}/paiement-sur-devis?email=${encodeURIComponent(clientEmail)}`

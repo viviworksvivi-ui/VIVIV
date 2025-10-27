@@ -11,7 +11,7 @@ import { Separator } from "@/components/ui/separator"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { CheckCircle, Mail, CreditCard, AlertCircle, Loader2, Package } from "lucide-react"
-import { getQuotesByEmail, type Quote } from "@/lib/quotes"
+import { type Quote } from "@/lib/quotes"
 import { toast } from "sonner"
 
 export default function PaiementSurDevisPage() {
@@ -28,9 +28,10 @@ export default function PaiementSurDevisPage() {
     if (emailFromUrl) {
       handleSearch()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [emailFromUrl])
 
-  const handleSearch = () => {
+  const handleSearch = async () => {
     if (!email.trim()) {
       toast.error("Veuillez entrer votre adresse email")
       return
@@ -39,17 +40,26 @@ export default function PaiementSurDevisPage() {
     setLoading(true)
     setSearched(true)
 
-    setTimeout(() => {
-      const foundQuotes = getQuotesByEmail(email.trim())
-      setQuotes(foundQuotes)
-      setLoading(false)
+    try {
+      const response = await fetch(`/api/quotes?email=${encodeURIComponent(email.trim())}`)
+      const data = await response.json()
 
-      if (foundQuotes.length === 0) {
-        toast.info("Aucun devis trouvé pour cette adresse email")
+      if (data.success) {
+        setQuotes(data.quotes)
+        if (data.quotes.length === 0) {
+          toast.info("Aucun devis trouvé pour cette adresse email")
+        } else {
+          toast.success(`${data.quotes.length} devis trouvé(s)`)
+        }
       } else {
-        toast.success(`${foundQuotes.length} devis trouvé(s)`)
+        toast.error("Erreur lors de la recherche")
       }
-    }, 500)
+    } catch (error) {
+      console.error("Error fetching quotes:", error)
+      toast.error("Erreur lors de la recherche")
+    } finally {
+      setLoading(false)
+    }
   }
 
   const handlePayment = async (quote: Quote) => {

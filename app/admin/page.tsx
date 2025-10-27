@@ -11,7 +11,7 @@ import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { Badge } from "@/components/ui/badge"
 import { defaultTestimonials, loadTestimonialsFromStorage, saveTestimonialsToStorage, type Testimonial } from "@/lib/testimonials"
-import { addQuote, getQuotesFromStorage, deleteQuote, updateQuote, type Quote } from "@/lib/quotes"
+import { type Quote } from "@/lib/quotes"
 import { toast } from "sonner"
 import { Mail, Send, CheckCircle, Loader2, Package, Plus, X, FileText, Edit2, Trash2 } from "lucide-react"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
@@ -48,15 +48,21 @@ export default function AdminPage() {
     const stored = loadTestimonialsFromStorage()
     if (stored) setTestimonials(stored)
     
-    // Charger les devis
-    const storedQuotes = getQuotesFromStorage()
-    setQuotes(storedQuotes)
+    // Charger les devis depuis le serveur
+    refreshQuotes()
   }, [])
   
-  // Rafraîchir les devis
-  const refreshQuotes = () => {
-    const storedQuotes = getQuotesFromStorage()
-    setQuotes(storedQuotes)
+  // Rafraîchir les devis depuis le serveur
+  const refreshQuotes = async () => {
+    try {
+      const response = await fetch("/api/admin/quotes")
+      const data = await response.json()
+      if (data.success) {
+        setQuotes(data.quotes)
+      }
+    } catch (error) {
+      console.error("Error loading quotes:", error)
+    }
   }
 
   const updateField = (index: number, field: keyof Testimonial, value: string) => {
@@ -140,15 +146,6 @@ export default function AdminPage() {
       // Filtrer les features vides
       const filteredFeatures = quoteForm.features.filter((f) => f.trim() !== "")
 
-      // Créer le devis localement
-      const newQuote = addQuote({
-        packageName: quoteForm.packageName,
-        price: Number(quoteForm.price),
-        clientEmail: quoteForm.clientEmail,
-        description: quoteForm.description.trim() || `Package ${quoteForm.packageName} pour ${quoteForm.clientEmail}`,
-        features: filteredFeatures,
-      })
-
       // Envoyer à l'API pour créer et envoyer l'email
       const response = await fetch("/api/admin/create-quote", {
         method: "POST",
@@ -168,8 +165,8 @@ export default function AdminPage() {
         throw new Error(data.error || "Erreur lors de la création du devis")
       }
 
-      // Mettre à jour la liste des devis
-      setQuotes((prev) => [newQuote, ...prev])
+      // Rafraîchir la liste des devis
+      await refreshQuotes()
 
       // Afficher le lien de paiement
       setPaymentLink(data.paymentLink)
@@ -241,7 +238,7 @@ export default function AdminPage() {
   }
 
   // Sauvegarder les modifications
-  const saveEditQuote = () => {
+  const saveEditQuote = async () => {
     if (!editingQuote) return
 
     // Validation
@@ -258,33 +255,61 @@ export default function AdminPage() {
       return
     }
 
-    // Filtrer les features vides
-    const filteredFeatures = editForm.features.filter((f) => f.trim() !== "")
+    try {
+      // Filtrer les features vides
+      const filteredFeatures = editForm.features.filter((f) => f.trim() !== "")
 
-    // Mettre à jour le devis
-    const updated = updateQuote(editingQuote.id, {
-      packageName: editForm.packageName,
-      price: Number(editForm.price),
-      clientEmail: editForm.clientEmail,
-      description: editForm.description.trim() || `Package ${editForm.packageName} pour ${editForm.clientEmail}`,
-      features: filteredFeatures,
-    })
+      // Mettre à jour le devis via API
+      const response = await fetch("/api/admin/quotes", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: editingQuote.id,
+          updates: {
+            packageName: editForm.packageName,
+            price: Number(editForm.price),
+            clientEmail: editForm.clientEmail,
+            description: editForm.description.trim() || `Package ${editForm.packageName} pour ${editForm.clientEmail}`,
+            features: filteredFeatures,
+          },
+        }),
+      })
 
-    if (updated) {
-      toast.success("Devis modifié avec succès !")
-      setIsEditDialogOpen(false)
-      setEditingQuote(null)
-      refreshQuotes()
-    } else {
+      const data = await response.json()
+
+      if (data.success) {
+        toast.success("Devis modifié avec succès !")
+        setIsEditDialogOpen(false)
+        setEditingQuote(null)
+        await refreshQuotes()
+      } else {
+        toast.error("Erreur lors de la modification du devis")
+      }
+    } catch (error) {
+      console.error("Error updating quote:", error)
       toast.error("Erreur lors de la modification du devis")
     }
   }
 
   // Supprimer un devis
-  const handleDeleteQuote = (quoteId: string) => {
-    deleteQuote(quoteId)
-    toast.success("Devis supprimé avec succès")
-    refreshQuotes()
+  const handleDeleteQuote = async (quoteId: string) => {
+    try {
+      const response = await fetch(`/api/admin/quotes?id=${quoteId}`, {
+        method: "DELETE",
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        toast.success("Devis supprimé avec succès")
+        await refreshQuotes()
+      } else {
+        toast.error("Erreur lors de la suppression")
+      }
+    } catch (error) {
+      console.error("Error deleting quote:", error)
+      toast.error("Erreur lors de la suppression")
+    }
   }
 
   return (
