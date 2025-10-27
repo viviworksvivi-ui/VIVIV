@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
-import { getQuotesByEmailServer, getAllQuotes } from "@/lib/quotes-server"
+import { getQuotesByEmailKV, getAllQuotes } from "@/lib/quotes-kv"
 
 export async function GET(req: NextRequest) {
   try {
@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
 
     // Si admin, retourner tous les devis
     if (isAdmin) {
-      const allQuotes = getAllQuotes()
+      const allQuotes = await getAllQuotes()
       return NextResponse.json({
         success: true,
         quotes: allQuotes,
@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: "Email requis" }, { status: 400 })
     }
 
-    const quotes = getQuotesByEmailServer(email)
+    const quotes = await getQuotesByEmailKV(email)
     return NextResponse.json({
       success: true,
       quotes,

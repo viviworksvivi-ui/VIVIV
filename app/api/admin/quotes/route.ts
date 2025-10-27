@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
-import { getAllQuotes, deleteQuoteServer, updateQuoteServer, markQuoteAsPaidServer } from "@/lib/quotes-server"
+import { getAllQuotes, deleteQuoteKV, updateQuoteKV, markQuoteAsPaidKV } from "@/lib/quotes-kv"
 
 // GET - Récupérer tous les devis (admin)
 export async function GET(req: NextRequest) {
@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
     }
 
-    const quotes = getAllQuotes()
+    const quotes = await getAllQuotes()
     return NextResponse.json({
       success: true,
       quotes,
@@ -40,7 +40,7 @@ export async function DELETE(req: NextRequest) {
       return NextResponse.json({ error: "ID du devis requis" }, { status: 400 })
     }
 
-    deleteQuoteServer(id)
+    await deleteQuoteKV(id)
     return NextResponse.json({
       success: true,
       message: "Devis supprimé avec succès",
@@ -70,7 +70,7 @@ export async function PUT(req: NextRequest) {
       return NextResponse.json({ error: "ID du devis requis" }, { status: 400 })
     }
 
-    const updatedQuote = updateQuoteServer(id, updates)
+    const updatedQuote = await updateQuoteKV(id, updates)
     if (!updatedQuote) {
       return NextResponse.json({ error: "Devis non trouvé" }, { status: 404 })
     }
@@ -98,7 +98,7 @@ export async function PATCH(req: NextRequest) {
       return NextResponse.json({ error: "ID du devis requis" }, { status: 400 })
     }
 
-    const success = markQuoteAsPaidServer(id)
+    const success = await markQuoteAsPaidKV(id)
     if (!success) {
       return NextResponse.json({ error: "Devis non trouvé" }, { status: 404 })
     }

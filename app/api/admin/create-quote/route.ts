@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 import nodemailer from "nodemailer"
-import { addQuoteServer } from "@/lib/quotes-server"
+import { addQuoteKV } from "@/lib/quotes-kv"
 
 export async function POST(req: NextRequest) {
   try {
@@ -24,10 +24,10 @@ export async function POST(req: NextRequest) {
     // Si pas de description, en générer une automatique
     const finalDescription = description?.trim() || `Package ${packageName} personnalisé pour vous`
 
-    // Créer le devis côté serveur
+    // Créer le devis avec Redis
     let quote
     try {
-      quote = addQuoteServer({
+      quote = await addQuoteKV({
         packageName,
         price: Number(price),
         clientEmail: clientEmail.toLowerCase().trim(),
