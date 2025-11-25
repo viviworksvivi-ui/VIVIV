@@ -35,3 +35,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large video files
+*.mov
+*.mp4
+public/copy_*.mov
+public/copy_8760A85F-23A7-498B-A823-A408AA06DE3D.mov
+# Exception: autoriser cette vidéo spécifique
+!public/copy-8760a85f-23a7-498b-a823-a408aa06de3d_SGGxSAID.mp4
