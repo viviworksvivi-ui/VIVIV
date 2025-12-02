@@ -55,24 +55,6 @@ const portfolioProjects = [
     url: "https://ecoclimatic.fr/"
   },
   {
-    title: "ElectroniKauto",
-    description: "Présence en ligne pour atelier automobile avec média et prises de rendez-vous.",
-    image: "/electroniKauto.png",
-    tags: ["CMS", "SEO", "Google Maps"],
-    category: "Corporate",
-    icon: Award,
-    url: "https://www.electronikauto.fr/"
-  },
-  {
-    title: "RepubliChild",
-    description: "Plateforme éditoriale créative avec galerie média et storytelling.",
-    image: "/republichild.png",
-    tags: ["Headless", "Animations", "Accessibilité"],
-    category: "Editorial",
-    icon: Users,
-    url: "https://republichild.com/"
-  },
-  {
     title: "Stratelink",
     description: "Site corporate moderne avec présentation des services et génération de leads.",
     image: "/stratelink.png",
@@ -80,6 +62,24 @@ const portfolioProjects = [
     category: "Corporate",
     icon: Award,
     url: "https://stratelink-global.ae/"
+  },
+  {
+    title: "Ribbaclim",
+    description: "Site vitrine services climatisation avec présentation des solutions et prise de contact.",
+    image: "/ribbaclim.png",
+    tags: ["Next.js", "SEO Local", "Contacts"],
+    category: "Site vitrine",
+    icon: Globe,
+    url: "https://www.ribbaclim.com/"
+  },
+  {
+    title: "Hikaya",
+    description: "Site web moderne avec interface utilisateur intuitive et expérience optimisée.",
+    image: "/hikaya.png",
+    tags: ["Next.js", "SEO", "Performance"],
+    category: "Site vitrine",
+    icon: Globe,
+    url: "https://www.hikaya.com/"
   }
 ]
 

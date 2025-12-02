@@ -41,31 +41,13 @@ export default function CreationSiteWebPage() {
               <div className="rounded-3xl overflow-hidden ring-1 ring-border/60 shadow-2xl bg-gradient-to-br from-primary/10 via-secondary/10 to-primary/10">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop"
+                    src="/creation.webp"
                     alt="Atelier de conception web moderne chez Viviworks"
                     fill
                     className="object-cover"
                     priority
                   />
                 </div>
-              </div>
-
-              {/* Vignettes flottantes */}
-              <div className="absolute -bottom-6 -left-6 w-28 h-28 rounded-2xl overflow-hidden ring-2 ring-background shadow-xl bg-background">
-                <Image
-                  src="https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=600&auto=format&fit=crop"
-                  alt="Chef de projet front-end"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="absolute -top-6 -right-6 w-28 h-28 rounded-2xl overflow-hidden ring-2 ring-background shadow-xl bg-background">
-                <Image
-                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop"
-                  alt="Développeur back-end"
-                  fill
-                  className="object-cover"
-                />
               </div>
             </div>
           </div>
@@ -113,7 +95,7 @@ export default function CreationSiteWebPage() {
             <div className="rounded-3xl overflow-hidden ring-1 ring-border/60 shadow-xl">
               <div className="relative aspect-[16/10]">
                 <Image
-                  src="/compressed_main-a-proximite-d-un-ordinateur-portable-qui-expulse-des-graphiques-et-des-fleches.webp"
+                  src="/frontend.webp"
                   alt="Interface et graphiques illustrant la performance front-end"
                   fill
                   className="object-cover"
@@ -132,7 +114,7 @@ export default function CreationSiteWebPage() {
             <div className="rounded-3xl overflow-hidden ring-1 ring-border/60 shadow-xl">
               <div className="relative aspect-[16/10]">
                 <Image
-                  src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop"
+                  src="/backend.webp"
                   alt="Architecture applicative côté serveur"
                   fill
                   className="object-cover"
