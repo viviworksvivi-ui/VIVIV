@@ -9,7 +9,7 @@ import './landing-page.css'
 export default function LandingPage() {
   const [typedText, setTypedText] = useState('')
   const [showCursor, setShowCursor] = useState(true)
-  const fullText = "Créez votre site web professionnel en quelques clics"
+  const fullText = "Testez-Nous. C'est Gratuit.\n\nUne landing page pro livrée en 48h. Vous gardez la maquette quoi qu'il arrive."
   const testimonialsRef = useRef<HTMLDivElement>(null)
   const logosRef = useRef<HTMLDivElement>(null)
   const formRef = useRef<HTMLDivElement>(null)
@@ -202,7 +202,7 @@ export default function LandingPage() {
             {/* Colonne gauche */}
             <div className="slide1-hero-left">
               <h1 className="slide1-hero-title">
-                <span className="slide1-typing-text">{typedText}</span>
+                <span className="slide1-typing-text" style={{ whiteSpace: 'pre-line' }}>{typedText}</span>
                 <span 
                   className="slide1-typing-cursor" 
                   style={{ opacity: showCursor ? 1 : 0 }}
@@ -212,23 +212,16 @@ export default function LandingPage() {
               <p className="slide1-hero-subtitle">
                 Transformez votre vision digitale en réalité avec nos solutions web innovantes et performantes
               </p>
-              
-              {/* Formulaire CTA */}
-              <form className="slide1-hero-form" onSubmit={(e) => {
-                e.preventDefault()
-                scrollToPacks()
-              }}>
-                <input 
-                  type="email" 
-                  name="email"
-                  placeholder="Entrez votre email"
-                  className="slide1-hero-input"
-                  required
-                />
-                <button type="submit" className="slide1-hero-button">
-                  Commencer
+
+              <div className="slide1-hero-cta">
+                <button
+                  type="button"
+                  className="slide1-hero-button"
+                  onClick={() => scrollToForm('decouverte')}
+                >
+                  Recevoir ma landing page offerte
                 </button>
-              </form>
+              </div>
               
               {/* Features */}
               <div className="slide1-hero-features">
@@ -1360,7 +1353,7 @@ export default function LandingPage() {
               <div className="slide5-form-group">
                 <label htmlFor="pack" className="slide5-label">Choisissez votre pack</label>
                 <select id="pack" name="pack" className="slide5-select" value={selectedPack} onChange={(e) => setSelectedPack(e.target.value)}>
-                  <option value="decouverte">Pack Découverte - Gratuit</option>
+                  <option value="decouverte">Landing page - gratuit</option>
                   <option value="performance">Pack Performance - Sur devis</option>
                   <option value="growth">Pack Growth - À partir de 499€</option>
                 </select>
@@ -1434,6 +1427,7 @@ export default function LandingPage() {
                   name="phone"
                   className="slide5-input"
                   placeholder="+33 7 1512 025"
+                  required
                 />
               </div>
             </div>
