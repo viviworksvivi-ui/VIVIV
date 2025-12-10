@@ -52,8 +52,8 @@
   align-items: center;
   overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  padding-top: 100px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .slide1-hero-background {
@@ -90,7 +90,7 @@
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 3rem 1rem;
+  padding: 1.5rem 1rem;
 }
 
 .slide1-hero-grid {
@@ -611,16 +611,38 @@
 @media (max-width: 768px) {
   .slide1-hero-title {
     font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+  
+  .slide1-hero-left {
+    margin-top: 0;
+    padding-top: 0;
   }
 }
 
 @media (max-width: 480px) {
+  .slide1-hero {
+    padding-top: 5px;
+    padding-bottom: 15px;
+    align-items: flex-start;
+    min-height: auto;
+  }
+  
+  .slide1-hero-content {
+    padding: 0.15rem 1rem;
+    margin-top: 0;
+  }
+  
   .slide1-hero-title {
     font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+    margin-top: 0;
   }
   
   .slide1-hero-subtitle {
     font-size: 1rem;
+    margin-bottom: 1rem;
   }
   
   .slide1-hero-features {
@@ -696,8 +718,20 @@
 
 @media (max-width: 768px) {
   .slide {
-    padding-top: 120px;
-    padding-bottom: 60px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  
+  .slide1-hero {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    align-items: flex-start;
+    min-height: auto;
+  }
+  
+  .slide1-hero-content {
+    padding: 0.25rem 1rem;
+    margin-top: 0;
   }
 }
 
